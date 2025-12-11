@@ -1,1 +1,1 @@
-Built out of pure HTML, CSS and JAvascript.
+Built out of pure HTML, CSS and Javascript.
