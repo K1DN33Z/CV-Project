@@ -45,7 +45,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
 }
 
 .card {
@@ -85,4 +85,57 @@ footer {
   line-height: 1.25rem;
   letter-spacing: 0.05rem;
   font-weight: 100;
+}
+
+.hero {
+  height: calc(100vh - 3rem); /* This is 100% of the screen - the header height */
+  background-color: black;
+  color: yellow;
+}
+
+.hero-container {
+  padding: 5rem 2rem 5rem 2rem;
+}
+
+.hero-title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.hero-first-name {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 8rem;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  font-weight: 100;
+  color: white;
+}
+
+.hero-last-name {
+  color: yellow;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  color: #ffffffcc;
+  max-width: 32rem;
+}
+
+.hero-button {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: black;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  padding: 1rem 2rem;
 }
