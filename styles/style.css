@@ -29,6 +29,8 @@ h6 {
    HEADER
    =================================== */
 .site-header {
+  position: sticky;
+  top: 0;
   background-color: yellow;
   color: black;
   height: 3.5rem;
