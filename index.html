@@ -1,12 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Jeandre's Portfolio'</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Jeandre Pretorius - Full-Stack Developer specializing in Laravel, React, and modern web technologies">
+  <title>Jeandre Pretorius | Full-Stack Developer</title>
+
+  <!-- Fonts -->
   <!-- Local Stylesheet -->
-  <link href="styles/style.css" rel="stylesheet" />
+  <link href="styles/style.css" rel="stylesheet">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,132 +21,50 @@
 </head>
 
 <body>
-  <header class="horizontal-flex">
-    <div class="header-name">JEANDRE PRETORIUS</div>
-    <div class="horizontal-flex header-hyperlinks">
-      <div>ABOUT</div>
-      <div>STORY</div>
-      <div>SKILLS</div>
-      <div>HOBBIES</div>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="site-header__brand">
+      JEANDRE PRETORIUS
     </div>
+
+    <nav class="site-header__nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li class="nav-list__item"><a href="#about">ABOUT</a></li>
+        <li class="nav-list__item"><a href="#story">STORY</a></li>
+        <li class="nav-list__item"><a href="#skills">SKILLS</a></li>
+        <li class="nav-list__item"><a href="#hobbies">HOBBIES</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-container"">
-      <p class="hero-title">
-        FULL-STACK DEVELOPER
-      </p>
+  <!-- Hero Section -->
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <p class="hero__label">
+          FULL-STACK DEVELOPER
+        </p>
 
-      <h1 class="hero-first-name">
-        JEANDRE
-        <br/>
-        <span class="hero-last-name">PRETORIUS</span>
-      </h1>
+        <h1 class="hero__title" id="hero-title">
+          JEANDRE<br>
+          <span class="hero__title-highlight">PRETORIUS</span>
+        </h1>
 
-      <p class="hero-subtitle">
-        Building robust web applications with Laravel, React, and everything in between.
-      </p>
+        <p class="hero__description">
+          Building robust web applications with Laravel, React, and everything in between.
+        </p>
 
-      <button type="button" class="hero-button">
-        VIEW MY STORY
-      </button>
-      
-    </div>
-  </section>
+        <button type="button" class="hero__cta" aria-label="View Jeandre's professional story">
+          VIEW MY STORY
+        </button>
+      </div>
+    </section>
+  </main>
 
-  <!-- <div class="horizontal-flex">
-    <div class="card">
-      <img class="image" src="images/SHINJI.webp" alt="Image of me" />
-      <h2 class="image-title">Jeandre Pretorius</h2>
-    </div>
-
-    <div class="card">
-      <p>
-        I am a full-stack web developer with a Bachelor's Degree in Information Technology from North-West University.
-        I created this page using HTML, CSS, and JavaScript, as using a framework would have been overkill.
-      </p>
-      <p>
-        I also took this as a chance to improve the foundations of web development, as I started off working on big,
-        complex websites with my feet hitting the ground using Laravel.
-      </p>
-      
-      <p>
-        Laravel is my favourite framework to use for full-stack development, but my experience doesn’t stop there!
-        I have built 3D mapping tools using React and DeckGL. I have led web development teams of 5–7 people at two
-        different companies, giving me leadership experience in managing teams.
-        I have done database management for multiple veterinary businesses, and I have been the sole developer of an
-        estate management system. I developed an LMS using NestJS and Google BigQuery, focusing solely on the backend.
-        And much more.
-        <br /><br />
-        I speak Afrikaans and English, and I am currently learning Deutsch.
-        <em>"Mein A1-Level ist gar nicht so schlecht."</em>
-      </p>
-    </div>
-
-  </div>
-  
-  <div class="card">
-    <h2>My Story</h2>
-
-    <p>
-      Unknown year (my memory is a bit hazy from then) – 2018:
-      I started working part-time at a security company during high school, doing basic IT tasks—fixing and building
-      computers, helping with the setup of wireless transmitters and receivers, installing security camera systems,
-      and resolving printer and internet issues for office workers.
-    </p>
-
-    <p>
-      Feb 2020 — Apr 2022:
-      I started working for Libralex in my first programming-related job. We used VB.NET for a Windows desktop
-      application called Vetmaster, which uses an on-site server at veterinary practices to run their businesses.
-      This included inventory, supplier, customer, and patient management, as well as an offline app that syncs data
-      with the database. I was also the only programmer on an estate and will-management software used by some lawyers
-      in South Africa.
-    </p>
-
-    <p>
-      Apr 2022 — Oct 2024:
-      I moved into web development at CubeZoo, a company that built custom websites for clients based on whatever
-      they needed. Here I acquired my love for Laravel and became proficient in it. Not all projects were Laravel-based;
-      sometimes we were outsourced and had to learn other frameworks and technologies on the fly, including React,
-      DeckGL, NestJS, and Google BigQuery.
-    </p>
-
-    <p>
-      Oct 2024 — Dec 2025:
-      I worked for Prodigy Finance, a global fintech company that provides student loans for learners studying abroad.
-      Here we used Ruby on Rails, React, and a micro-service architecture. I also gained experience with Jenkins and
-      Terraform.
-    </p>
-  </div>
-
-  <div class="card">
-    <h4>My Skills</h4>
-    <ul>
-      <li>PHP & Laravel</li>
-      <li>React & NestJS</li>
-      <li>C# & VB.NET</li>
-    </ul>
-
-    <p>
-      I prefer developing on Linux, but I also have experience working on Windows and macOS at all my previous companies.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>Hobbies & Interests</h2>
-    <ul>
-      <li>Computer Games</li>
-      <li>Board Games & TTRPGs</li>
-      <li>Running & Exercise</li>
-      <li>Coding (outside of work!)</li>
-    </ul>
-  </div> -->
-
-  <footer>
-    © Jeandre Pretorius — 2025 • Built with HTML, CSS & JavaScript
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© Jeandre Pretorius — 2025 • Built with HTML, CSS & JavaScript</p>
   </footer>
 </body>
-
 
 </html>

@@ -1,32 +1,152 @@
-header {
-  background-color: yellow;
-  color: black;
-  height: 3rem;
-  /* Font */
-  font-family: "Ubuntu Sans Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 28px;
+/* ===================================
+   CSS RESET & BASE STYLES
+   =================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  /* Font */
   font-family: 'Inter', sans-serif;
-  margin: 0;
+  line-height: 1.6;
 }
 
+/* ===================================
+   TYPOGRAPHY
+   =================================== */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Inter', sans-serif;
   letter-spacing: 0.02em;
 }
 
-footer {
+/* ===================================
+   HEADER
+   =================================== */
+.site-header {
+  background-color: yellow;
+  color: black;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
+.site-header__brand {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: 0.05rem;
+  font-weight: 100;
+  padding-left: 1.5rem;
+}
+
+.site-header__nav {
+  padding-right: 1.5rem;
+}
+
+/* ===================================
+   NAVIGATION
+   =================================== */
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.05rem;
+  font-weight: 100;
+}
+
+.nav-list__item a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.nav-list__item a:hover {
+  opacity: 0.7;
+}
+
+/* ===================================
+   HERO SECTION
+   =================================== */
+.hero {
+  height: calc(100vh - 3.5rem); /*100%screen height - header height */
+  background-color: black;
+  color: yellow;
+  padding: 5rem 2rem;
+}
+
+.hero__content {
+  max-width: 1200px;
+  margin: 0;
+}
+
+.hero__label {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.hero__title {
+  font-family: 'Inter', sans-serif;
+  font-size: 8rem;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  font-weight: 100;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.hero__title-highlight {
+  color: yellow;
+}
+
+.hero__description {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 32rem;
+  margin-bottom: 2rem;
+}
+
+.hero__cta {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: black;
+  background-color: yellow;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  height: 4rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hero__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 255, 0, 0.3);
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+.site-footer {
   background-color: black;
   color: white;
   text-align: center;
@@ -34,108 +154,44 @@ footer {
   justify-content: center;
   align-items: center;
   height: 2rem;
-  /* Font */
-  font-family: "Ubuntu Sans Mono", monospace;
-  font-optical-sizing: auto;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-style: normal;
 }
 
-.horizontal-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-.card {
-  border: 2px solid black;
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 4rem;
+  }
 
-.image-title {
-  font-size: 12px;
-  text-align: center;
-}
+  .site-header__brand {
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
 
-.image {
-  height: 150px;
-  width: 150px;
-}
+  .nav-list {
+    gap: 1rem;
+    font-size: 0.75rem;
+  }
 
-.header-name {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  letter-spacing: 0.05rem;
-  font-weight: 100;
-  align-items: center;
-  justify-content: center;
-  padding-left: 1.5rem;
-}
-
-.header-hyperlinks {
-  padding-right: 1.5rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  letter-spacing: 0.05rem;
-  font-weight: 100;
-}
-
-.hero {
-  height: calc(100vh - 3rem); /* This is 100% of the screen - the header height */
-  background-color: black;
-  color: yellow;
-}
-
-.hero-container {
-  padding: 5rem 2rem 5rem 2rem;
-}
-
-.hero-title {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-}
-
-.hero-first-name {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  font-size: 8rem;
-  line-height: 1;
-  letter-spacing: -0.025em;
-  font-weight: 100;
-  color: white;
-}
-
-.hero-last-name {
-  color: yellow;
-}
-
-.hero-subtitle {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 500;
-  color: #ffffffcc;
-  max-width: 32rem;
-}
-
-.hero-button {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  color: black;
-  background-color: yellow;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4rem;
-  padding: 1rem 2rem;
+  .site-header__nav {
+    padding-right: 1rem;
+  }
 }
