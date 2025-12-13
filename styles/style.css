@@ -93,6 +93,9 @@ h6 {
   padding: 5%;
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: calc(5% + 6rem);
 }
 
 .hero__content {
@@ -103,6 +106,7 @@ h6 {
   gap: clamp(2rem, 5vw, 5rem);
   align-items: center;
   flex-wrap: wrap;
+  flex: 1;
 }
 
 .hero__text-content {
@@ -189,6 +193,43 @@ h6 {
   box-shadow: 0 4px 8px rgba(255, 255, 0, 0.3);
 }
 
+.carousel {
+  position: absolute;
+  bottom: 64px;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: black;
+  color: #666666;
+  border-top: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  overflow: hidden;
+}
+
+.carousel__track {
+  display: flex;
+  gap: 0.5rem;
+  animation: scroll 50s linear infinite;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.carousel__item {
+  font-weight: 500;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.1em;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 /* ===================================
    FOOTER
    =================================== */
@@ -252,6 +293,7 @@ h6 {
 
   .hero {
     padding: 8% 5%;
+    padding-bottom: calc(8% + 5rem);
   }
 
   .hero__content {
@@ -271,6 +313,11 @@ h6 {
   .hero__cta {
     width: 100%;
     max-width: 20rem;
+  }
+
+  .carousel__item {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -294,6 +341,7 @@ h6 {
 
   .hero {
     padding: 10% 5%;
+    padding-bottom: calc(10% + 5rem);
   }
 
   .hero__content {
@@ -322,6 +370,15 @@ h6 {
     padding: 1rem;
   }
 
+  .carousel {
+    padding: 0.75rem 0;
+  }
+
+  .carousel__item {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
   .site-footer {
     font-size: 0.75rem;
     padding: 1rem 3%;
@@ -337,6 +394,10 @@ h6 {
   .nav-list {
     gap: 0.5rem;
     font-size: 0.65rem;
+  }
+
+  .hero {
+    padding-bottom: calc(10% + 4.5rem);
   }
 
   .hero__title {
@@ -355,5 +416,14 @@ h6 {
   .hero__image-border {
     height: 10rem;
     width: 10rem;
+  }
+
+  .carousel {
+    padding: 0.5rem 0;
+  }
+
+  .carousel__item {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
