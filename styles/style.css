@@ -209,7 +209,7 @@ h6 {
 .carousel__track {
   display: flex;
   gap: 0.5rem;
-  animation: scroll 50s linear infinite;
+  animation: scroll 50s linear infinite; /* Update this when you add or remove items from the list */
   white-space: nowrap;
   width: max-content;
 }
