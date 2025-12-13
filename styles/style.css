@@ -14,6 +14,42 @@ body {
 }
 
 /* ===================================
+   SCROLLBAR STYLING
+   =================================== */
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+  border: 2px solid #ffe600;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffe600;
+  border-radius: 0;
+  border: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd700;
+}
+
+/* Remove scrollbar buttons/arrows */
+::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ffe600 black;
+}
+
+/* ===================================
    TYPOGRAPHY
    =================================== */
 h1,
