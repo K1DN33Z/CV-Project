@@ -93,12 +93,32 @@ h6 {
   padding: 5% 5%;
   display: flex;
   align-items: flex-start;
+
+  .hero__image-background {
+    height: 22rem;
+    width: 22rem;
+    background-color: #332e00;
+    rotate: -3deg;
+  }
+
+  .hero__image-border {
+    border: 4px solid yellow;
+    rotate: +3deg;
+    height: 20rem;
+    width: 20rem;
+    object-fit:contain;
+    position: relative;
+    color: white;
+    top: 15px;
+    left: 15px;
+  }
 }
 
 .hero__content {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  display: flex;
 }
 
 .hero__label {
