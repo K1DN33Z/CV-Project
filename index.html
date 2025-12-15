@@ -39,8 +39,9 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Main Content -->
   <main>
+    <!-- Hero Section -->
     <section class="hero" aria-labelledby="hero-title" id="hero">
       <div class="hero__content">
         <div class="hero__text-content fade-in-up">
@@ -62,22 +63,27 @@
           </div>
         </div>
       </div> 
+      
+      <!-- Skills Carousel -->
       <div class="carousel">
         <div class="carousel__track" id="skills-carousel">
         </div>
       </div>  
-    </section> 
-    <section class="about" id="about" aria-labelledby="about">
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about" aria-labelledby="about-heading">
       <div class="container">
         <div class="scroll-reveal">
           <div class="accent-bar-display">
             <div class="accent-bar"></div>
             <span class="accent-bar-text">01</span>
           </div>
-          <div class="text-headline">
+          <h2 class="text-headline" id="about-heading">
             ABOUT ME
-          </div>
+          </h2>
         </div>
+        
         <div class="about-cards scroll-reveal">
           <div class="card">
             <p class="card-title">
@@ -87,28 +93,32 @@
               I started off working on big, complex websites with my feet hitting the ground using Laravel. This foundation gave me deep appreciation for clean architecture and efficient code.
             </p>
           </div>
+          
           <div class="card">
             <p class="card-title">
               <strong>Laravel</strong> is my favourite framework for full-stack development, but my experience spans far beyond.
             </p>
-            <div class="flex-s">
-              <span class="accent-arrow">→</span>
-              <p class="card-subtitle">Built 3D mapping tools using React and DeckGL</p>      
-            </div>
-            <div class="flex-s">
-              <span class="accent-arrow">→</span>
-              <p class="card-subtitle">Led web development teams of 5–7 people at two companies</p>   
-            </div>   
-            <div class="flex-s">
-              <span class="accent-arrow">→</span>
-              <p class="card-subtitle">Sole developer of an estate management system</p>       
-            </div>   
-            <div class="flex-s">
-              <span class="accent-arrow">→</span>
-              <p class="card-subtitle">Developed LMS using NestJS and Google BigQuery</p>
+            <div class="card-list">
+              <div class="card-list__item">
+                <span class="accent-arrow">→</span>
+                <p class="card-subtitle">Built 3D mapping tools using React and DeckGL</p>      
+              </div>
+              <div class="card-list__item">
+                <span class="accent-arrow">→</span>
+                <p class="card-subtitle">Led web development teams of 5–7 people at two companies</p>   
+              </div>   
+              <div class="card-list__item">
+                <span class="accent-arrow">→</span>
+                <p class="card-subtitle">Sole developer of an estate management system</p>       
+              </div>   
+              <div class="card-list__item">
+                <span class="accent-arrow">→</span>
+                <p class="card-subtitle">Developed LMS using NestJS and Google BigQuery</p>
+              </div>
             </div>   
           </div>
         </div>
+        
         <div class="about-additional-info-block scroll-reveal">
           <p class="about-additional-info-text">
             I speak <strong>Afrikaans</strong> and <strong>English</strong>, and I am currently learning <strong>Deutsch</strong>.
