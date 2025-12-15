@@ -284,9 +284,9 @@ h6 {
 }
 
 .accent-bar {
-    height: 0.25rem;
-    width: 4rem;
-    background-color: #ffe600;
+  height: 0.25rem;
+  width: 4rem;
+  background-color: #ffe600;
 }
 
 .accent-bar-display {
@@ -320,6 +320,35 @@ h6 {
   line-height: 1;
   letter-spacing: -0.025em;
 }
+
+.about-cards {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  padding: 2rem;
+  border: 2px solid black;
+  background: white;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: black;
+  z-index: -1;
+  transform: translate(4px, 4px);
+  transition: transform 0.5s ease;
+}
+
+.card:hover::after {
+  transform: translate(8px, 8px);
+}
+
 
 /* ===================================
    FOOTER
