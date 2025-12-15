@@ -267,6 +267,43 @@ h6 {
 }
 
 /* ===================================
+   ABOUT SECTION
+   =================================== */
+
+.about {
+  background-color: white;
+  padding: 8rem 0;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.accent-bar {
+    height: 0.25rem;
+    width: 4rem;
+    background-color: #ffe600;
+}
+
+.accent-bar-display {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.accent-bar-text {
+  color: hsl(0 0% 45%);
+  letter-spacing: 0.1em;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+/* ===================================
    FOOTER
    =================================== */
 .site-footer {
