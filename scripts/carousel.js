@@ -45,8 +45,8 @@ function populateCarousel(items) {
   items.forEach((skill, index) => {
     carouselTrack.appendChild(createItem(skill));
 
-    // Add separator except after last item
-    if (index < items.length - 1) {
+    // Add separator
+    if (index < items.length) {
       carouselTrack.appendChild(createItem("•"));
     }
   });
