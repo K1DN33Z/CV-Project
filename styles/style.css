@@ -276,12 +276,11 @@ h6 {
 }
 
 .container {
-  width: 100%;
-  margin-right: 3.5rem;
-  margin-left: 3.5rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
+
 
 .accent-bar {
   height: 0.25rem;
@@ -323,8 +322,8 @@ h6 {
 
 .about-cards {
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  gap: 4rem;
+  align-items: stretch;
 }
 
 .card {
@@ -332,6 +331,17 @@ h6 {
   padding: 2rem;
   border: 2px solid black;
   background: white;
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-subtitle {
+  color: hsl(0 0% 45%)
 }
 
 .card::after {
@@ -368,6 +378,16 @@ h6 {
 
 .text-accent {
   color: #ffe600;
+}
+
+.flex-s {
+  display: flex;
+  gap: 1rem;
+}
+
+.accent-arrow {
+  color: #ffe600;
+  font-weight: 900;
 }
 
 
