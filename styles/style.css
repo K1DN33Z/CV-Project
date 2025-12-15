@@ -303,6 +303,17 @@ h6 {
   line-height: 1.75rem;
 }
 
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
 /* ===================================
    FOOTER
    =================================== */
