@@ -319,6 +319,7 @@ h6 {
   font-size: clamp(2.5rem, 6vw, 3.75rem);
   line-height: 1;
   letter-spacing: -0.025em;
+  font-weight: 500;
 }
 
 .about-cards {
@@ -401,6 +402,14 @@ h6 {
 
 .text-accent {
   color: #ffe600;
+}
+
+/* ===================================
+   STORY
+   =================================== */
+.story {
+  background-color: #f5f5f5;
+  padding: clamp(4rem, 10vw, 8rem) 0;
 }
 
 /* ===================================
@@ -634,6 +643,10 @@ h6 {
   }
 
   .about {
+    padding: 4rem 0;
+  }
+
+  .story {
     padding: 4rem 0;
   }
 
