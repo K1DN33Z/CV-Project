@@ -654,6 +654,15 @@ h6 {
     color: white;
   }
 
+  .skills-content {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .progress-section {
+    color: white;
+  }
+
 /* ===================================
    FOOTER
    =================================== */
