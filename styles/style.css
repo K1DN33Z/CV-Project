@@ -642,6 +642,19 @@ h6 {
 }
 
 /* ===================================
+   STORY
+   =================================== */
+  .skills {
+    background-color: black;
+    height: 300px;
+    padding: clamp(4rem, 10vw, 8rem) 0;
+  }
+
+  .alt {
+    color: white;
+  }
+
+/* ===================================
    FOOTER
    =================================== */
 .site-footer {
@@ -876,6 +889,10 @@ h6 {
   }
 
   .story {
+    padding: 4rem 0;
+  }
+
+  .skills {
     padding: 4rem 0;
   }
 
