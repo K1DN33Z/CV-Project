@@ -412,6 +412,235 @@ h6 {
   padding: clamp(4rem, 10vw, 8rem) 0;
 }
 
+.timeline {
+  position: relative;
+  margin: 4rem auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ccc;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-content {
+  width: 45%;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-content.left {
+  margin-right: auto;
+  padding-right: 3rem;
+}
+
+.timeline-content.right {
+  margin-left: auto;
+  padding-left: 3rem;
+  text-align: left;
+}
+
+.timeline-card {
+  position: relative;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border: 2px solid black;
+  background: white;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 6px 6px 0 0 black;
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 10px 10px 0 0 black;
+}
+
+.timeline-date {
+  display: inline-block;
+  align-self: flex-start;
+  justify-self: flex-start;
+  margin-bottom: 1rem;
+  padding: 0.25rem 1rem;
+  background-color: #ffe600;
+  color: black;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  line-height: 1.25rem;
+  font-weight: 200;
+}
+
+/* Timeline point - Fixed centering */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 2px;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover::before {
+  width: 24px;
+  height: 24px;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #ffe600;
+  z-index: 4;
+}
+
+.timeline-item:hover::after {
+  width: 12px;
+  height: 12px;
+}
+
+/* Remove the black hover effect from card::after */
+.timeline-card::after {
+  display: none;
+}
+
+.timeline-card-title {
+  margin-bottom: 0.25rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 200;
+  align-self: flex-start;
+  justify-self: flex-start;
+}
+
+.timeline-card-subtitle {
+  margin-bottom: 1rem;
+  align-self: flex-start;
+  justify-self: flex-start;
+  color: #ffe600;
+}
+
+.timeline-card-description {
+  color: #666666;
+}
+
+/* Mobile Timeline */
+@media (max-width: 768px) {
+  .timeline {
+    padding: 0 1rem;
+  }
+  
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+    padding-left: 2rem !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+  
+  .timeline-content.left,
+  .timeline-content.right {
+    margin-right: 0;
+    margin-left: 60px;
+    text-align: left;
+  }
+  
+  .timeline-item::before,
+  .timeline-item::after {
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .timeline-item:hover::before {
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .timeline-card {
+    min-width: 100%;
+  }
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .timeline-content {
+    width: 40%;
+  }
+  
+  .timeline-content.left {
+    padding-right: 2rem;
+  }
+  
+  .timeline-content.right {
+    padding-left: 2rem;
+  }
+}
+
+/* Ensure cards stack properly on mobile */
+@media (max-width: 480px) {
+  .timeline {
+    margin: 3rem auto;
+  }
+  
+  .timeline-item {
+    margin-bottom: 3rem;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 50px);
+    margin-left: 50px !important;
+  }
+  
+  .timeline-item::before {
+    width: 20px;
+    height: 20px;
+    left: 25px;
+  }
+  
+  .timeline-item::after {
+    width: 10px;
+    height: 10px;
+    left: 25px;
+  }
+  
+  .timeline-card {
+    box-shadow: 4px 4px 0 0 black;
+  }
+  
+  .timeline-card:hover {
+    box-shadow: 8px 8px 0 0 black;
+  }
+}
+
 /* ===================================
    FOOTER
    =================================== */
