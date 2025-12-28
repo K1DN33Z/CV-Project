@@ -29,6 +29,10 @@
       JEANDRE PRETORIUS
     </div>
 
+    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+
     <nav class="site-header__nav" aria-label="Main navigation">
       <ul class="nav-list">
         <li class="nav-list__item"><a href="#about">ABOUT</a></li>
@@ -53,9 +57,9 @@
           <p class="hero__description">
             Building robust web applications with Laravel, React, and everything in between.
           </p>
-          <button type="button" class="hero__cta" aria-label="View Jeandre's professional story">
+          <a href="#story" class="hero__cta" aria-label="View Jeandre's professional story">
             VIEW MY STORY
-          </button>
+          </a>
         </div>
         <div class="hero__image-container fade-in">
           <div class="hero__image-background">
@@ -276,7 +280,7 @@
 
             <div class="skill-item">
               <div class="skill-header">
-                <span class="skill-name">C# & VB>NET</span>
+                <span class="skill-name">C# & VB.NET</span>
                 <span class="skill-percentage">70%</span>
               </div>
               <div class="progress-bar">
@@ -323,7 +327,7 @@
             <p class="platforms-subtitle">
               Experienced with modern DevOps.
               <br>
-              Linux <3
+              Linux ❤️
             </p>
           </div>
         </div>
@@ -335,6 +339,30 @@
   <footer class="site-footer">
     <p>© Jeandre Pretorius — 2025 • Built with HTML, CSS & JavaScript</p>
   </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('.site-header__nav');
+    
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      nav.classList.toggle('is-open');
+      menuToggle.classList.toggle('is-active');
+      document.body.classList.toggle('menu-open');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-list__item a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        menuToggle.classList.remove('is-active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+      });
+    });
+  </script>
 </body>
 
 </html>
