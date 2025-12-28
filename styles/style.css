@@ -646,7 +646,6 @@ h6 {
    =================================== */
   .skills {
     background-color: black;
-    height: 300px;
     padding: clamp(4rem, 10vw, 8rem) 0;
   }
 
@@ -662,6 +661,183 @@ h6 {
   .progress-section {
     color: white;
   }
+
+/* ===================================
+   SKILLS SECTION
+   =================================== */
+.skills {
+  background-color: black;
+  padding: clamp(4rem, 10vw, 8rem) 0;
+  min-height: auto;
+}
+
+.skills-content {
+  display: flex;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Section 1: Skills with Progress Bars */
+.skills-progress {
+  flex: 1;
+  min-width: min(100%, 300px);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+}
+
+.skill-name {
+  letter-spacing: 0.025em;
+  font-weight: 100;
+}
+
+.skill-percentage {
+  color: #ffe600;
+  font-weight: 100;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #ffe600;
+  transition: width 1.5s ease-out;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Section 2: Platforms */
+.platforms-section {
+  flex: 1;
+  min-width: min(100%, 300px);
+  border: 2px solid #333;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.platforms-title {
+  color: white;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  margin-bottom: 0.5rem;
+}
+
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.platform-button {
+  background-color: transparent;
+  border: 0.2px solid #666;
+  color: white;
+  text-align: center;
+  font-weight: 100;
+  transition: all 0.3s ease;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0 0;
+}
+
+.platform-button:hover {
+  background-color: #ffe600;
+  color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 230, 0, 0.3);
+}
+
+.platforms-subtitle {
+  color: #999;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* Responsive Design for Skills Section */
+@media (max-width: 768px) {
+  .skills-content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .skills-progress,
+  .platforms-section {
+    min-width: 100%;
+  }
+
+  .platforms-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-progress {
+    gap: 1.5rem;
+  }
+
+  .platforms-section {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .platforms-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .platform-button {
+    padding: 0.875rem 1rem;
+    min-height: 3rem;
+  }
+}
 
 /* ===================================
    FOOTER
