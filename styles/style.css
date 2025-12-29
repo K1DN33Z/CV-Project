@@ -508,17 +508,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .timeline-card {
-  position: relative;
   padding: 1.5rem;
   border: 2px solid black;
-  background: white;
-  box-shadow: 4px 4px 0 0 black;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.timeline-card:active {
-  transform: translateY(-2px);
-  box-shadow: 6px 6px 0 0 black;
 }
 
 .timeline-date {
@@ -932,15 +923,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 12px;
   }
 
-  .timeline-card {
-    box-shadow: 6px 6px 0 0 black;
-  }
-
-  .timeline-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 10px 10px 0 0 black;
-  }
-
   .skills {
     padding: 4rem 0;
   }
@@ -1068,10 +1050,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .timeline-item {
     margin-bottom: 4rem;
-  }
-
-  .timeline-card {
-    padding: 2rem;
   }
 
   .timeline-card-title {
