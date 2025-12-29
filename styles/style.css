@@ -684,6 +684,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===================================
+   HOBBIES SECTION (MOBILE-FIRST)
+   =================================== */
+.hobbies {
+  background-color: white;
+  padding: 3rem 0;
+}
+
+/* ===================================
    FOOTER
    =================================== */
 .site-footer {
@@ -961,6 +969,10 @@ h1, h2, h3, h4, h5, h6 {
   .platform-button {
     font-size: 1rem;
   }
+
+  .hobbies {
+    padding: 4rem 0;
+  }
 }
 
 /* ===================================
@@ -1014,7 +1026,8 @@ h1, h2, h3, h4, h5, h6 {
 
   .about,
   .story,
-  .skills {
+  .skills
+  .hobbies {
     padding: 6rem 0;
   }
 
@@ -1069,9 +1082,15 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .hobbies-cards {
+    display: flex;
+    gap: 2rem;
+  }
+
   .site-footer {
     font-size: 1rem;
   }
+
 }
 
 /* ===================================
